@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.mainbg {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    z-index: -1;
+}
+
+.menu ul {
+    list-style: none;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin-top: 56px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    width: 100px;
+    padding: 25px 20px;
+    color: #fff;
+    margin: 30px;
+}
+
+.text-slogan {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    padding-top: 5%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.text-home {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.discoverbtn {
+    text-align: center;
+    cursor: pointer;
+    border-radius: 25px;
+    color: #000;
+    background: #fff;
+    padding: 10px 10px;
+    margin: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.services {
+    width: 100%;
+    margin-top: 90vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.s-heading {
+    text-align: center;
+}
+
+.s-heading h1 {
+    color: #d3d3d3;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+
+.s-heading p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    margin: 5px;
+    text-align: center;
+}
+
+.s-box-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px 25px;
+    height: 400px;
+    box-sizing: border-box;
+    margin: 30px;
+    position: relative;
+}
+
+.s-box img {
+    height: 75px;
+}
+
+.s-box h1 {
+    color: #dfdfdf;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.s-box p {
+    color: #fff;
+    text-align: center;
+}
+
+.s-btn {
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(74, 144, 226, 0.50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #576975;
+    margin-top: 10px;
+}
+
+.bar {
+    width: 100px;
+    height: 6px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border-radius: 0px 0px 10px 10px;
+    display: none;
+    animation: bar 0.5s;
+}
+
+.s-box:hover {
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.08);
+    transition: all ease 0.3s;
+}
+
+.s-btn:hover {
+    background-color: #ffffff;
+    border: 1px solid #4a90e2;
+    color: #000000;
+    transition: all ease 0.3s;
+}
+
+.s-box:hover .bar {
+    display: block;
+}
+
+@keyframes bar {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+@media(max-width:1050px) {
+    .s-box-container {
+        flex-wrap: wrap;
+    }
+    .services {
+        height: auto;
+    }
+    .s-heading {
+        margin: 15px;
+    }
+    .s-box {
+        flex-grow: 1;
+    }
+}
+
+.products {
+    margin-top: 33.5vh;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card-title,
+.card-text {
+    color: white;
+}
+
+.btn-dark {
+    opacity: 0.2!important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: white!important;
+}
+
+.flip-card {
+    height: 300px;
+}
+
+
+/* This container is needed to position the front and back side */
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* Position the front and back side */
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+
+/* Style the front side (fallback if image is missing) */
+
+.flip-card-front img {
+    width: 50%!important
+}
+
+
+/* Style the back side */
+
+.flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgb(66, 63, 63);
+}
+
+.container {
+    margin-top: 33.5vh;
+    width: 100%;
+    height: 80vh;
+    color: #fff;
+}
+
+.heading {
+    font-size: 60px;
+    color: white;
+}
+
+.heading span {
+    font-style: italic;
+    font-size: 30px;
+}
+
+.profiles {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.profile {
+    display: inline-block;
+    text-align: center;
+}
+
+.profile1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.profile2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.profile .profile-img {
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.profile:hover .profile-img {
+    filter: grayscale(0);
+}
+
+.user-name {
+    margin-top: 30px;
+    font-size: 24.5px;
+}
+
+.profile h5 {
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 3px;
+    color: #ccc;
+}
+
+.profile p {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 1150px) {
+    .profiles {
+        flex-direction: column;
+    }
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile p {
+        text-align: center;
+        margin: 20px 60px 80px 60px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .heading {
+        font-size: 40px;
+        color: white;
+        text-align: center;
+    }
+    .heading span {
+        font-size: 15px;
+    }
+    .profiles {
+        margin: 20px 0;
+    }
+    .profile p {
+        margin: 20px 10px 80px 10px;
+    }
+}

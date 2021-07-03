@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Our Style Studio | Home</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="mainbg"></div>
+    <div class="headers">
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Our Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="text-slogan">
+        <div class="text-home">WELCOME TO OUR STYLE’S WEBSITE. WE WILL BRING THE BEST CHOICE FOR YOU</div>
+        <div id="slogan"></div>
+        <script type="text/javascript">
+            var i = 0,
+                text;
+            text = "LOW PRICE - HIGH QUALITY"
+
+            function typing() {
+                if (i < text.length) {
+                    document.getElementById("slogan").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, 100);
+                }
+            }
+            typing();
+        </script>
+        <div>
+            <a href="">
+                <button type="button" class="discoverbtn">Explore now</button>
+            </a>
+        </div>
+    </div>
+
+    <section class="services" id="serivces">
+        <!--heading---------------->
+        <div class="s-heading">
+            <h1>Ser
+                <font color="#4a90e2">vic</font>es</h1>
+            <p>We Provide The Best Servies For Our Customers</p>
+        </div>
+        <!--services-box-container------------------->
+        <div class="s-box-container">
+            <!--service-box-1---------------->
+            <div class="s-box">
+                <!--top-bar-------->
+                <div class="bar"></div>
+                <!--img---------->
+                <img alt="1" src="images/1.png" />
+                <!--servies-name---------->
+                <h1>Web development</h1>
+                <!--details------>
+                <p>Our Style is a development web team. We will bring the best experiments for you.</p>
+                <!--btn---------->
+                <a class="s-btn" href="#">More</a>
+            </div>
+            <!--service-box-1---------------->
+            <div class="s-box">
+                <!--top-bar-------->
+                <div class="bar"></div>
+                <!--img---------->
+                <img alt="2" src="images/2.png" />
+                <!--servies-name---------->
+                <h1>Hosting</h1>
+                <!--details------>
+                <p>We support you comprehensively about domain, hosting</p>
+                <!--btn---------->
+                <a class="s-btn" href="#">More</a>
+            </div>
+            <!--service-box-3---------------->
+            <div class="s-box">
+                <!--top-bar-------->
+                <div class="bar"></div>
+                <!--img---------->
+                <img alt="3" src="images/3.png" />
+                <!--servies-name---------->
+                <h1>Supporting</h1>
+                <!--details------>
+                <p>Interact and fix your web for free. And there are a lot of beautiful themes for you</p>
+                <!--btn---------->
+                <a class="s-btn" href="#">More</a>
+            </div>
+        </div>
+    </section>
+    <div class="products">
+        <div class="s-heading">
+            <h1>Our Products</h1>
+        </div>
+
+        <div id="products">
+            <div class="swiper-container mySwiper" style="margin-top:5%">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="./images/demo_img.jpg" alt="Avatar">
+                                </div>
+                                <div class="flip-card-back">
+                                    <h1>Project 1</h1>
+                                    <a href="#" style="color:white">Explore more>></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="./images/demo_img.jpg" alt="Avatar" style="width:60%">
+                                </div>
+                                <div class="flip-card-back">
+                                    <h1>Project 2</h1>
+                                    <a href="#" style="color:white">Explore more>></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="./images/demo_img.jpg" alt="Avatar" style="width:60%">
+                                </div>
+                                <div class="flip-card-back">
+                                    <h1>Project 3</h1>
+                                    <a href="#" style="color:white">Explore more>></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+    <!-- Code injected by live-server -->
+
+    <div class="container">
+        <div class="s-heading">
+            <h1>About Us</h1>
+        </div>
+
+        <div class="profiles">
+            <div class="profile1">
+                <div class="profile">
+                    <img src="img1.jpg" class="profile-img">
+
+                    <h3 class="user-name">Lê Doãn Nam</h3>
+                    <h5>Creative Director</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eveniet soluta hic sunt sit reprehenderit.</p>
+                </div>
+                <div class="profile">
+                    <img src="img2.jpg" class="profile-img">
+
+                    <h3 class="user-name">Cái Thái Dương</h3>
+                    <h5>Managing Partner</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis sint quod.</p>
+                </div>
+                <div class="profile">
+                    <img src="img3.jpg" class="profile-img">
+
+                    <h3 class="user-name">Nguyễn Tuấn Khang</h3>
+                    <h5>Project Manager</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, eveniet!</p>
+                </div>
+                <div class="profile">
+                    <img src="img1.jpg" class="profile-img">
+
+                    <h3 class="user-name">Nguyễn Hải Đăng</h3>
+                    <h5>Creative Director</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum eveniet soluta hic sunt sit reprehenderit.</p>
+                </div>
+            </div>
+            <div class="profile2">
+                <div class="profile">
+                    <img src="img2.jpg" class="profile-img">
+
+                    <h3 class="user-name">Nguyễn Đức Hải Nam</h3>
+                    <h5>Managing Partner</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis sint quod.</p>
+                </div>
+                <div class="profile">
+                    <img src="img3.jpg" class="profile-img">
+
+                    <h3 class="user-name">Nguyễn Minh Hiếu</h3>
+                    <h5>Project Manager</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, eveniet!</p>
+                </div>
+                <div class="profile">
+                    <img src="img3.jpg" class="profile-img">
+
+                    <h3 class="user-name">Liên Gia Bảo</h3>
+                    <h5>Project Manager</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, eveniet!</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
